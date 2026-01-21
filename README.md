@@ -35,7 +35,7 @@ A production-ready AI-powered video analytics platform for real-time CCTV monito
 
 1. **Clone/Navigate to Project**
 ```bash
-cd f:/MyProjects_YJ/Internshala/Saimax_Tech_Solutions_AI_Job
+cd SentinelSight_AI_Video_Analytics
 ```
 
 2. **Start Services**
