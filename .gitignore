@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# JavaScript
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Data & Database
+*.db
+*.sqlite
+data/
+snapshots/
+backend/data/
+mosquitto/data/
+mosquitto/log/
+
+# Media Files (Don't push large videos)
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# AI Models (Don't push large binary models)
+*.pt
+*.onnx
+yolov8*.pt
+
+# IDE
+.vscode/
+.idea/

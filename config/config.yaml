@@ -1,0 +1,37 @@
+system:
+  fps_target: 15
+  max_cameras: 4
+  snapshot_retention_days: 30
+  log_level: INFO
+  snapshot_dir: ../data/snapshots
+
+inference:
+  model: yolov8m.pt
+  confidence_threshold: 0.5
+  device: cpu
+  classes: []  # Empty = detect all classes (person, car, animals, etc.)
+
+mqtt:
+  enabled: true
+  broker: localhost
+  port: 1883
+  topic_prefix: sentinelsight
+  qos: 1
+
+database:
+  url: sqlite:///data/sentinelsight.db
+
+# Example camera configurations (can be managed via API)
+cameras: []
+
+# Rule configurations
+rules:
+  intrusion:
+    enabled: true
+    priority: high
+    description: "Person/vehicle enters restricted zone"
+  loitering:
+    enabled: true
+    threshold_seconds: 30
+    priority: medium
+    description: "Person remains in zone > 30 seconds"
