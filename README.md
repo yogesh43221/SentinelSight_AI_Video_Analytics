@@ -102,12 +102,18 @@ curl -X POST http://localhost:8000/api/v1/cameras \
 
 ### Using Test Streams
 
-**Public RTSP Test Stream:**
+**Option A: Local Video File (Easiest)**
+1. Place a video file (e.g., `people_walking.mp4`) in the project root folder.
+2. When adding a camera, simply enter the **Filename** or **Absolute Path** as the URL:
+   - **URL**: `people_walking.mp4`
+   *(The system will play the video and auto-restart when it ends)*
+
+**Option B: Public RTSP Stream**
 ```
 rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
 ```
 
-**Local Video File (using FFmpeg):**
+**Option C: FFmpeg Simulation (Advanced)**
 ```bash
 ffmpeg -re -stream_loop -1 -i test_video.mp4 -f rtsp rtsp://localhost:8554/stream
 ```
