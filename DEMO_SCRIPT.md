@@ -33,9 +33,11 @@
 1. Click "Add Camera" button
 2. Fill in:
    - Name: "Front Entrance"
-   - RTSP URL: `rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4`
+   - RTSP URL: `people_walking.mp4` (or absolute path if needed)
    - Location: "Building A - Floor 1"
 3. Click "Add"
+
+**Note**: Using the local video ensures better accuracy and no network lag during the demo!
 
 **Show**:
 - Camera appears in grid with "Online" status

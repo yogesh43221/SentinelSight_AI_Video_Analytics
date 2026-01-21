@@ -33,20 +33,44 @@ A production-ready AI-powered video analytics platform for real-time CCTV monito
 
 ### Installation
 
-1. **Clone/Navigate to Project**
-```bash
-cd SentinelSight_AI_Video_Analytics
-```
-
-2. **Start Services**
+#### Option 1: Docker (Easiest)
+1. **Start Services**
 ```bash
 docker-compose up -d
 ```
+2. **Access**
+- Dashboard: http://localhost:3000
+- API: http://localhost:8000/docs
 
-3. **Access Dashboard**
-- Frontend: http://localhost:3000
-- API Docs: http://localhost:8000/docs
-- Health Check: http://localhost:8000/api/v1/health
+#### Option 2: Local Development
+**Prerequisites**: Python 3.9+, Node.js 18+
+
+1. **Backend**
+```bash
+# Setup Virtual Env
+python -m venv venv
+# Windows: venv\Scripts\activate
+# Linux/Mac: source venv/bin/activate
+
+# Install Deps
+pip install -r backend/requirements.txt
+
+# Run
+python -m uvicorn backend.api.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+2. **Frontend**
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+**💡 Windows Shortcut:**
+Just double-click `run_app.bat` to start everything!
+
+3. **Access**
+- Dashboard: http://localhost:3000
 
 ### First-Time Setup
 
