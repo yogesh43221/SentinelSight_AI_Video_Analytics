@@ -33,16 +33,7 @@ A production-ready AI-powered video analytics platform for real-time CCTV monito
 
 ### Installation
 
-#### Option 1: Docker (Easiest)
-1. **Start Services**
-```bash
-docker-compose up -d
-```
-2. **Access**
-- Dashboard: http://localhost:3000
-- API: http://localhost:8000/docs
-
-#### Option 2: Local Development
+#### Option 1: Local Setup (Recommended for Testing)
 **Prerequisites**: Python 3.9+, Node.js 18+
 
 1. **Backend**
@@ -71,6 +62,15 @@ Just double-click `run_app.bat` to start everything!
 
 3. **Access**
 - Dashboard: http://localhost:3000
+
+#### Option 2: Docker Deployment (Bonus)
+1. **Start Services**
+```bash
+docker-compose up -d
+```
+2. **Access**
+- Dashboard: http://localhost:3000
+- API: http://localhost:8000/docs
 
 ### First-Time Setup
 
